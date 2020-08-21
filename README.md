@@ -8,3 +8,6 @@ Seleccionar partida nueva para jugar o introducir el id de la partida que querem
 
 Hacer click en una casilla vacía, ésta se rellenará con X o O según el turno.
 
+## Base de datos
+
+La base de datos está configurada como un MariaDB versión 10.3.23 con el usuario tres_raya, con contraseña tres_raya y sobre el schema tres_raya.
