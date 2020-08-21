@@ -1,0 +1,42 @@
+body {
+    background-color: lightgray;
+}
+
+#game {
+  margin: auto;
+  margin-top: 25px;
+  width: 300px;
+  background-color:  #000;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 1px 1px;
+}
+
+.caja {
+  width: 99px;
+  background-color: #fff;
+  margin: 1px 1px 0 0;
+  height: 99px;
+}
+
+.game-text {
+  margin: 40px 0 0 40px;
+}
+
+#game-info, #controls {
+  text-align: center;
+}
+
+#controls {
+  margin-top: 25px;
+}
+
+#continue {
+  margin-top: 20px;
+}
+
+#continue-id {
+  width: 50px;
+  margin-right: 10px;
+}
+

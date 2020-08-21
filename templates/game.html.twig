@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <div id="game-info">
+    <h1 id="game-id"></h1>
+    <h2 id="gameTurn"></h2>
+    <h3 id="winner"></h3>
+  </div>
+  <div id="game">
+    {% for i in 0..8 %}
+      {% set class = '' %}
+      {% set square = game.getSquareByPosition(i) %}
+      {% if square is null %}
+        {% set class='empty' %}
+      {% else %}
+        {% set class='caja-' ~ square.player %}
+      {% endif %}
+      <div class="caja {{class}}" id="caja-{{i}}"></div>
+    {% endfor %}
+  </div>
+  <div id="controls">
+    <a href="{{ path('new_game') }}">Nueva partida</a><br><br>
+    <a href="{{ path('index') }}">Volver</a>
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+  {{ encore_entry_script_tags('app') }}
+  <script type="text/javascript">
+    var turn = {{ game.turn }};
+    var gameId = {{ game.id }};
+    var winner = {{ game.winner is null ? 'null' : game.winner }};
+  </script>
+{% endblock %}
+

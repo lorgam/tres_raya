@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <div id="game-info">
+    <h1>Tres en raya</h1>
+  </div>
+  <div id="controls">
+    <a href="{{ path('new_game') }}">Nueva partida</a>
+    <div id="continue">
+      <input type="text" id="continue-id"/>
+      <a href="#" id="continue-link">Continuar</a>
+    </div>
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+  {{ encore_entry_script_tags('index') }}
+{% endblock %}
+
