@@ -7,8 +7,7 @@
   <div id="controls">
     <a href="{{ path('new_game') }}">Nueva partida</a>
     <div id="continue">
-      <input type="text" id="continue-id"/>
-      <a href="#" id="continue-link">Continuar</a>
+      {{ form(form) }}
     </div>
   </div>
 {% endblock %}
